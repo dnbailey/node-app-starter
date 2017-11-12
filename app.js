@@ -10,6 +10,13 @@ app.set('view engine', 'pug')
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+mongoose.Promise = global.Promise
+mongoose.connect('mongodb://mongo:27017', { useMongoClient: true })
+  .catch(err => {
+      console.error('App starting error:', err.stack);
+      process.exit(1);
+  })
+
 app.use('/', require('./routes/index.js'))
 
 app.listen(app.get('port'), () => {

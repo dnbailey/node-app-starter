@@ -2,3 +2,16 @@ extends layout
 
 block content
   h1= title
+  
+  form(action="/" method="post")
+    input(type="text" placeholder="Title" name="title" autofocus)
+    button(type="submit") Submit
+  
+  br
+      
+  table
+    tr
+      th Title
+    each article in articles
+      tr
+        td= article.title

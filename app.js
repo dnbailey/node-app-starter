@@ -10,6 +10,9 @@ app.set('view engine', 'pug')
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://mongo:27017', { useMongoClient: true })
   .catch(err => {

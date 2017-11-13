@@ -2,6 +2,7 @@ extends layout
 
 block content
   h1= title
+  //- Loop through all the articles
   each article in articles
     form(action=`/${article._id}` method="post")
       input(type="text" placeholder="Title" name="title" value=`${article.title}` autofocus)

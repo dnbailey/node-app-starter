@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/dnbailey/node-app-starter.git"
   },
-  "author": "",
+  "author": "Nathan Bailey",
   "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/dnbailey/node-app-starter/issues"

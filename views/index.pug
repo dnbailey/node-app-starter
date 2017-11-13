@@ -12,6 +12,10 @@ block content
   table
     tr
       th Title
+      th Controls
     each article in articles
       tr
         td= article.title
+        td 
+          a(href=`/${article._id}`) Edit
+          a(href=`/${article._id}/delete`) Delete
